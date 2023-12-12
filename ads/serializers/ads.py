@@ -40,17 +40,6 @@ class AdCreateSerializer(serializers.ModelSerializer):
         user = self.context['request'].user
         return Ad.objects.create(author=user, **validated_data)
 
-    # def create(self, validated_data):
-    #     try:
-    #         author_id = validated_data.pop('author_id')
-    #         author = User.objects.get(id=author_id)
-    #     except (KeyError, User.DoesNotExist):
-    #         raise serializers.ValidationError("Invalid author ID")
-    #
-    #     validated_data['author'] = author
-    #     ad = Ad.objects.create(**validated_data)
-    #     return ad
-
 
 class AdDestroySerializer(serializers.ModelSerializer):
     class Meta:
