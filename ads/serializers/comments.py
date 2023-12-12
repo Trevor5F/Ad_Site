@@ -32,4 +32,4 @@ class CommentCreateSerializer(serializers.ModelSerializer):
 class CommentDestroySerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ["id"]  # можно написать ad_id = self.kwargs['ad'] во view
+        fields = ["id"]
