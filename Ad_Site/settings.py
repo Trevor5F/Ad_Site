@@ -109,8 +109,6 @@ AUTH_USER_MODEL = 'users.User'
 DJOSER = {
     'SERIALIZERS': {'user_create': 'users.serializers.UserRegistrationSerializer'},
     'LOGIN_FIELD': 'email',
-    'PASSWORD_RESET_CONFIRM_URL': 'reset-password-confirm/{uid}/{token}',
-    'EMAIL_CONFIRMATION_URL': 'email-confirmation/{uid}/{token}',
 }
 
 # Database
